@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.mfelipesp.diabetefuzzy.MainActivity">
+
+    <TextView
+        android:text="@string/lb_batimento_cardiaco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtQtdComida"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/txtBatimentoCardiaco" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_alignBottom="@+id/txtBatimentoCardiaco"
+        android:layout_toRightOf="@+id/txtBatimentoCardiaco"
+        android:layout_toEndOf="@+id/txtBatimentoCardiaco"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/editBatimentoCardiaco" />
+
+    <TextView
+        android:text="@string/lb_glicemia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBatimentoCardiaco"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/txtGlicemia" />
+
+    <TextView
+        android:text="@string/lb_taxa_hormonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtGlicemia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:id="@+id/txtTaxaHormonal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_alignBottom="@+id/txtGlicemia"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/editGlicemia" />
+
+    <Switch
+        android:text="@string/lb_sedentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stcSedentario"
+        android:textOn="@string/lb_sim"
+        android:textOff="@string/lb_nao"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtTaxaHormonal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editIdade"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editPressao"
+        android:layout_alignStart="@+id/editPressao" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_idade"
+        android:id="@+id/txtIdade"
+        android:layout_alignBottom="@+id/editIdade"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editPressao"
+        android:layout_below="@+id/editIdade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:text="@string/lb_pressao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPressao"
+        android:layout_alignBottom="@+id/editPressao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/lb_qtd_comida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/txtQtdComida"
+        android:layout_below="@+id/editPressao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editQtdComida"
+        android:layout_above="@+id/txtBatimentoCardiaco"
+        android:layout_toEndOf="@+id/txtGlicemia"
+        android:layout_toRightOf="@+id/txtGlicemia" />
+
+    <Button
+        android:text="@string/lb_enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEnviar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editTaxaHormonal"
+        android:layout_alignEnd="@+id/editTaxaHormonal"
+        android:onClick="btnEnviar"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTaxaHormonal"
+        android:layout_above="@+id/stcSedentario"
+        android:layout_toRightOf="@+id/stcSedentario"
+        android:layout_toEndOf="@+id/stcSedentario" />
+</RelativeLayout>

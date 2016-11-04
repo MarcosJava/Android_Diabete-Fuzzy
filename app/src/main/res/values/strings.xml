@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Diabete Fuzzy</string>
+    <string name="lb_idade">Idade</string>
+    <string name="lb_pressao">Pressão</string>
+    <string name="lb_qtd_comida">Qtd Comida(kg)</string>
+    <string name="lb_batimento_cardiaco">Batimento Cardiaco(bps)</string>
+    <string name="lb_glicemia">Glicemia(dl/mg)</string>
+    <string name="lb_taxa_hormonal">Taxa Hormonal</string>
+    <string name="lb_sedentario">Sedentario</string>
+    <string name="lb_chance_diabetico">Chance de ser diabetico</string>
+    <string name="lb_sim">SIM</string>
+    <string name="lb_nao">NÃO</string>
+
+    <string name="lb_enviar">Enviar</string>
+</resources>
