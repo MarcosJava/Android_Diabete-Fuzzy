@@ -39,21 +39,16 @@ public class IdadeFuzzyficacao {
     }
 
     private Double conjuntoNebulosoJovem(Integer valor){
-
         if(valor <= 30){
             return 1D;
         }
-
         if(valor > 30 && valor < 35){
             return  (35 - valor)/5D;
         }
-
         if (valor >= 35){
             return 0D;
         }
-
         return 0D;
-
     }
 
     private Double conjuntoNebulosoAdulto(Integer valor){
