@@ -35,9 +35,9 @@ public class BatimentoCardiacoFuzzyficacao {
         //Aplica o conjunto nebuloso do Batimento Alto
         Double alta = conjuntoNebuloAlta(batimentoCardiaco.getValor());
 
-        batimentoCardiaco.setBaixoValor(baixa);
-        batimentoCardiaco.setNormalValor(normal);
-        batimentoCardiaco.setAltoValor(alta);
+        batimentoCardiaco.setBaixoValor(Math.abs(baixa));
+        batimentoCardiaco.setNormalValor(Math.abs(normal));
+        batimentoCardiaco.setAltoValor(Math.abs(alta));
     }
 
     private Double conjuntoNebuloAlta(Double x) {

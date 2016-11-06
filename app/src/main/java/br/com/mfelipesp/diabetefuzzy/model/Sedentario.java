@@ -21,7 +21,7 @@ public class Sedentario {
     @Override
     public String toString() {
         return "Sedentario{" +
-                "tipoSedentario=" + tipoSedentario +
+                "tipoSedentario=" + tipoSedentario.getValor() +
                 '}';
     }
 }

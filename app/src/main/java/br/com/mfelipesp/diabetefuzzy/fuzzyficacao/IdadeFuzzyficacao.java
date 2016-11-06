@@ -26,15 +26,15 @@ public class IdadeFuzzyficacao {
 
         //Aplica o conjunto nebuloso do Jovem
         Double conjuntoNebuloJovem = conjuntoNebulosoJovem(idade.getValor());
-        idade.setIdadeJovemConjuntoNebuloso(conjuntoNebuloJovem);
+        idade.setValorJovem(Math.abs(conjuntoNebuloJovem));
 
         //Aplica o conjunto nebuloso do Adulto
         Double conjuntoNebuloAdulto = conjuntoNebulosoAdulto(idade.getValor());
-        idade.setIdadeAdultoConjuntoNebuloso(conjuntoNebuloAdulto);
+        idade.setValorAdulto(Math.abs(conjuntoNebuloAdulto));
 
         //Aplica o conjunto nebuloso do Idoso
         Double conjuntoNebuloIdoso = conjuntoNebulosoIdoso(idade.getValor());
-        idade.setIdadeIdosoConjuntoNebuloso(conjuntoNebuloIdoso);
+        idade.setValorIdoso(Math.abs(conjuntoNebuloIdoso));
 
     }
 

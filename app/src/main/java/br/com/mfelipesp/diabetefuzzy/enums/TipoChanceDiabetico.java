@@ -5,5 +5,5 @@ package br.com.mfelipesp.diabetefuzzy.enums;
  */
 
 public enum TipoChanceDiabetico {
-    SIM, NAO
+    TEM, NAO_TEM
 }

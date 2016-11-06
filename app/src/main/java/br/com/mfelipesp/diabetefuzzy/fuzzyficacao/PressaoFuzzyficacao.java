@@ -38,9 +38,9 @@ public class PressaoFuzzyficacao {
         //Aplica o conjunto nebuloso do Pressao Alta
         Double alta = conjuntoNebuloAlta(pressao.getValor());
 
-        pressao.setBaixaValor(baixa);
-        pressao.setNormalValor(normal);
-        pressao.setAltaValor(alta);
+        pressao.setBaixaValor(Math.abs(baixa));
+        pressao.setNormalValor(Math.abs(normal));
+        pressao.setAltaValor(Math.abs(alta));
 
     }
 

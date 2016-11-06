@@ -31,8 +31,8 @@ public class KdComidaFuzzyficacao {
         //Aplica o conjunto nebuloso de Muita Comida
         Double muito = conjuntoNebuloMuito(kgComida.getValor());
 
-        kgComida.setPoucoValor(pouco);
-        kgComida.setMuitoValor(muito);
+        kgComida.setPoucoValor(Math.abs(pouco));
+        kgComida.setMuitoValor(Math.abs(muito));
     }
 
     private Double conjuntoNebuloPouco(Double valor) {

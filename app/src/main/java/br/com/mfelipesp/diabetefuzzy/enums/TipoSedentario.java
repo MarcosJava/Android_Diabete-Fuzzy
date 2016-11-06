@@ -6,5 +6,16 @@ package br.com.mfelipesp.diabetefuzzy.enums;
 
 public enum TipoSedentario {
 
-    SIM, NAO
+    SIM(1D), NAO(1D);
+
+    private Double valor;
+
+    TipoSedentario(Double valor){
+        this.valor = valor;
+    }
+
+    public Double getValor(){
+        return valor;
+    }
+
 }

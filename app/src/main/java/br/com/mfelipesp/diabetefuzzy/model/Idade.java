@@ -9,9 +9,9 @@ import br.com.mfelipesp.diabetefuzzy.enums.TipoIdade;
 public class Idade {
 
     private Integer valor;
-    private Double idadeJovemConjuntoNebuloso;
-    private Double idadeAdultoConjuntoNebuloso;
-    private Double idadeIdosoConjuntoNebuloso;
+    private Double valorJovem;
+    private Double valorAdulto;
+    private Double valorIdoso;
     private TipoIdade tipoIdade;
 
     public Idade() {
@@ -33,37 +33,37 @@ public class Idade {
         this.tipoIdade = tipoIdade;
     }
 
-    public Double getIdadeJovemConjuntoNebuloso() {
-        return idadeJovemConjuntoNebuloso;
+    public Double getValorJovem() {
+        return valorJovem;
     }
 
-    public void setIdadeJovemConjuntoNebuloso(Double idadeJovemConjuntoNebuloso) {
-        this.idadeJovemConjuntoNebuloso = idadeJovemConjuntoNebuloso;
+    public void setValorJovem(Double valorJovem) {
+        this.valorJovem = valorJovem;
     }
 
-    public Double getIdadeAdultoConjuntoNebuloso() {
-        return idadeAdultoConjuntoNebuloso;
+    public Double getValorAdulto() {
+        return valorAdulto;
     }
 
-    public void setIdadeAdultoConjuntoNebuloso(Double idadeAdultoConjuntoNebuloso) {
-        this.idadeAdultoConjuntoNebuloso = idadeAdultoConjuntoNebuloso;
+    public void setValorAdulto(Double valorAdulto) {
+        this.valorAdulto = valorAdulto;
     }
 
-    public Double getIdadeIdosoConjuntoNebuloso() {
-        return idadeIdosoConjuntoNebuloso;
+    public Double getValorIdoso() {
+        return valorIdoso;
     }
 
-    public void setIdadeIdosoConjuntoNebuloso(Double idadeIdosoConjuntoNebuloso) {
-        this.idadeIdosoConjuntoNebuloso = idadeIdosoConjuntoNebuloso;
+    public void setValorIdoso(Double valorIdoso) {
+        this.valorIdoso = valorIdoso;
     }
 
     @Override
     public String toString() {
         return "Idade{" +
                 "valor=" + valor +
-                ", idadeJovemConjuntoNebuloso=" + idadeJovemConjuntoNebuloso +
-                ", idadeAdultoConjuntoNebuloso=" + idadeAdultoConjuntoNebuloso +
-                ", idadeIdosoConjuntoNebuloso=" + idadeIdosoConjuntoNebuloso +
+                ", valorJovem=" + valorJovem +
+                ", valorAdulto=" + valorAdulto +
+                ", valorIdoso=" + valorIdoso +
                 ", tipoIdade=" + tipoIdade +
                 '}';
     }
