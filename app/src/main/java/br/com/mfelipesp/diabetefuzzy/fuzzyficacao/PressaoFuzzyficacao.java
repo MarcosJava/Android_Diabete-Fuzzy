@@ -41,6 +41,7 @@ public class PressaoFuzzyficacao {
         pressao.setBaixaValor(Math.abs(baixa));
         pressao.setNormalValor(Math.abs(normal));
         pressao.setAltaValor(Math.abs(alta));
+        
 
     }
 

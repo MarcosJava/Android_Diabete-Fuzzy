@@ -12,6 +12,22 @@ public class Glicemia {
     private Double normalValor;
     private Double altoValor;
 
+
+    public boolean isBaixo(){
+        if(this.getBaixoValor() > 0){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isAlto(){
+        if(this.getAltoValor() > 0){
+            return true;
+        }
+        return false;
+    }
+
+
     private TipoGlicemia tipoGlicemia;
 
     public TipoGlicemia getTipoGlicemia() {

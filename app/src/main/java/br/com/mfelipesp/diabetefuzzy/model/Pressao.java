@@ -14,6 +14,23 @@ public class Pressao {
     private Double altaValor;
     private TipoPressao tipoPressao;
 
+
+    public boolean isBaixa(){
+        if(this.getBaixaValor() > 0 ){
+            return true;
+        }
+        return false;
+    }
+
+
+    public boolean isAlta(){
+        if(this.getAltaValor() > 0 ){
+            return true;
+        }
+        return false;
+    }
+
+
     public Double getValor() {
         return valor;
     }

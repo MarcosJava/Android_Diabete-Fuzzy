@@ -26,10 +26,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:layout_alignBottom="@+id/txtBatimentoCardiaco"
-        android:layout_toRightOf="@+id/txtBatimentoCardiaco"
         android:layout_toEndOf="@+id/txtBatimentoCardiaco"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp"
         android:id="@+id/editBatimentoCardiaco" />
 
     <TextView
@@ -122,16 +119,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editQtdComida"
-        android:layout_above="@+id/txtBatimentoCardiaco"
-        android:layout_toEndOf="@+id/txtGlicemia"
-        android:layout_toRightOf="@+id/txtGlicemia" />
-
     <Button
         android:text="@string/lb_enviar"
         android:layout_width="wrap_content"
@@ -152,4 +139,15 @@
         android:layout_above="@+id/stcSedentario"
         android:layout_toRightOf="@+id/stcSedentario"
         android:layout_toEndOf="@+id/stcSedentario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editQtdComida"
+        android:layout_above="@+id/txtBatimentoCardiaco"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtBatimentoCardiaco" />
 </RelativeLayout>

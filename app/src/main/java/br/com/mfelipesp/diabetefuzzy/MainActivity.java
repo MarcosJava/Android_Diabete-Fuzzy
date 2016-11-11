@@ -127,11 +127,25 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("SAIDA === ", saida + "");
 
+
+        limpar();
+
+
         //RESPOSTA
         Intent myIntent = new Intent(this, ResultadoActivity.class);
         myIntent.putExtra(MainActivity.EXTRA_VALOR, saida + "");
         startActivity(myIntent);
 
+
+    }
+
+    private void limpar() {
+        this.editTaxaHormonal.setText("");
+        this.editGlicemia.setText("");
+        this.editQtdComida.setText("");
+        this.editBatimentoCardiaco.setText("");
+        this.editIdade.setText("");
+        this.editPressao.setText("");
 
     }
 

@@ -47,7 +47,15 @@ public enum RegraNebulosa {
     REGRA_39("SE idade = JOVEM e pressao = NORMAL e kgComida = POUCO e BatimentoCardiaco = NORMAL e Glicemia = BAIXO e TaxaHormonal = NORMAL e Sendentario = NAO LOGO chanceDiabetico = TEM"),
     REGRA_40("SE idade = JOVEM e pressao = BAIXA e kgComida = POUCO e BatimentoCardiaco = NORMAL e Glicemia = NORMAL e TaxaHormonal = NORMAL e Sendentario = SIM LOGO chanceDiabetico = NAO_TEM"),
     REGRA_41("SE idade = JOVEM e pressao = NORMAL e kgComida = POUCO e BatimentoCardiaco = NORMAL e Glicemia = NORMAL e TaxaHormonal = NORMAL e Sendentario = NAO LOGO chanceDiabetico = NAO_TEM"),
-    ;
+    REGRA_42("SE Glicemia = ALTA e pressao = ALTA LOGO chanceDiabetico = TEM"),
+    REGRA_43("SE Glicemia = ALTA e pressao = NORMAL LOGO chanceDiabetico = TEM"),
+    REGRA_44("SE Glicemia = ALTA e pressao = BAIXA LOGO chanceDiabetico = TEM"),
+    REGRA_45("SE Glicemia = BAIXA e pressao = ALTA LOGO chanceDiabetico = TEM"),
+    REGRA_46("SE Glicemia = BAIXA e pressao = NORMAL LOGO chanceDiabetico = NAO_TEM"),
+    REGRA_47("SE Glicemia = BAIXA e pressao = BAIXA LOGO chanceDiabetico = TEM"),
+    REGRA_48("SE Glicemia = NORMAL e pressao = BAIXA LOGO chanceDiabetico = NAO_TEM"),
+    REGRA_49("SE Glicemia = NORMAL e pressao = NORMAL LOGO chanceDiabetico = NAO_TEM"),
+    REGRA_50("SE Glicemia = NORMAL e pressao = ALTA LOGO chanceDiabetico = NAO_TEM"),;
     private String valor;
     RegraNebulosa(String valor){
         this.valor = valor;

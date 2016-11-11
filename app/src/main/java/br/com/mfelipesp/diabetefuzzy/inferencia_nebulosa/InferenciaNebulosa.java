@@ -87,6 +87,15 @@ public class InferenciaNebulosa {
         Double regra39 = grauPertinenciaRegra39();
         Double regra40 = grauPertinenciaRegra40();
         Double regra41 = grauPertinenciaRegra41();
+        Double regra42 = grauPertinenciaRegra42();
+        Double regra43 = grauPertinenciaRegra43();
+        Double regra44 = grauPertinenciaRegra44();
+        Double regra45 = grauPertinenciaRegra45();
+        Double regra46 = grauPertinenciaRegra46();
+        Double regra47 = grauPertinenciaRegra47();
+        Double regra48 = grauPertinenciaRegra48();
+        Double regra49 = grauPertinenciaRegra49();
+        Double regra50 = grauPertinenciaRegra50();
 
         //Cria InferenciaVO e adicioa o grau de pertinencia a cada REGRA
 
@@ -132,6 +141,15 @@ public class InferenciaNebulosa {
         lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_39, regra39));
         lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_40, regra40));
         lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_41, regra41));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_42, regra42));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_43, regra43));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_44, regra44));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_45, regra45));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_46, regra46));
+        lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_47, regra47));
+        //lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_48, regra48));
+        //lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_49, regra49));
+        //lstInferenciaVO.add(new InferenciaVO(RegraNebulosa.REGRA_50, regra50));
         //REMOVE OS GRAUS DE PERTINENCIAS ZEROS
         retiraZero(lstInferenciaVO);
 
@@ -146,7 +164,6 @@ public class InferenciaNebulosa {
         for (InferenciaVO inferenciaVO : lstInferenciaVO){
             if(hasValorZero(inferenciaVO.getValorMinimoGanho())){
                 contemZeros.add(inferenciaVO);
-
             }
         }
 
@@ -156,6 +173,96 @@ public class InferenciaNebulosa {
 
 
     }
+
+    private Double menorValor(List<Double> valores) {
+
+        Double menor = 111111110D;
+
+        for (Double d: valores) {
+
+            if(d < menor){
+                menor = d;
+            }
+
+        }
+
+        return menor;
+    }
+
+
+    private boolean hasValorZero(Double valor){
+        if(valor == 0){
+            return true;
+        }
+        return false;
+    }
+
+
+    private Double grauPertinenciaRegra50() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getAltaValor());
+        valores.add(this.glicemia.getNormalValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra49() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getNormalValor());
+        valores.add(this.glicemia.getNormalValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra48() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getBaixaValor());
+        valores.add(this.glicemia.getNormalValor());
+        return menorValor(valores);
+    }
+
+
+    private Double grauPertinenciaRegra47() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getBaixaValor());
+        valores.add(this.glicemia.getBaixoValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra46() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getNormalValor());
+        valores.add(this.glicemia.getBaixoValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra45() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getAltaValor());
+        valores.add(this.glicemia.getBaixoValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra44() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getBaixaValor());
+        valores.add(this.glicemia.getAltoValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra43() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getNormalValor());
+        valores.add(this.glicemia.getAltoValor());
+        return menorValor(valores);
+    }
+
+    private Double grauPertinenciaRegra42() {
+        List<Double> valores = new ArrayList<>();
+        valores.add(this.pressao.getAltaValor());
+        valores.add(this.glicemia.getAltoValor());
+        return menorValor(valores);
+    }
+
+
 
     //41- SE idade = JOVEM e pressao = NORMAL e kgComida = POUCO e BatimentoCardiaco = NORMAL e
     // Glicemia = NORMAL e TaxaHormonal = NORMAL e Sendentario = NAO LOGO chanceDiabetico = NAO_TEM
@@ -803,28 +910,6 @@ public class InferenciaNebulosa {
         return menorValor(valores);
     }
 
-    private Double menorValor(List<Double> valores) {
-
-        Double menor = 999999999D;
-
-        for (Double d: valores) {
-
-            if(d < menor){
-                menor = d;
-            }
-
-        }
-
-        return menor;
-    }
-
-
-    private boolean hasValorZero(Double valor){
-        if(valor == 0){
-            return true;
-        }
-        return false;
-    }
 
 
 }

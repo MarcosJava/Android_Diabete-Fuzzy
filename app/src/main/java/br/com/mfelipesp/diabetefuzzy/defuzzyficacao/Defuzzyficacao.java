@@ -1,11 +1,13 @@
 package br.com.mfelipesp.diabetefuzzy.defuzzyficacao;
 
+import android.content.Intent;
 import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import br.com.mfelipesp.diabetefuzzy.enums.TipoChanceDiabetico;
 import br.com.mfelipesp.diabetefuzzy.inferencia_nebulosa.InferenciaVO;
@@ -62,14 +64,16 @@ public class Defuzzyficacao {
 
         for(ChanceDiabetico cd : lstChanceDiabetico) {
             dividendo = cd.getValorInferencia() * cd.getValorPertinencia() + dividendo;
-            divisor = cd.getValorInferencia() + divisor;
+            dividendo = Math.abs(dividendo);
 
+            divisor = cd.getValorInferencia() + divisor;
+            divisor = Math.abs(divisor);
         }
 
         Double quociente = dividendo/divisor;
-
+        quociente = Math.abs(quociente);
         Log.i(" ULTIMO RESULTADO == ", dividendo + "/" + divisor + "=" + quociente);
-
+        Integer resultado = quociente.intValue();
         return quociente;
     }
 
